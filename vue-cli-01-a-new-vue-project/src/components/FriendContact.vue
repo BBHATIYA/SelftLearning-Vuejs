@@ -14,6 +14,7 @@
         {{ emailAddress }}
       </li>
     </ul>
+    <button @click="$emit('delete', id)">Delete</button>
   </li>
 </template>
 
@@ -34,6 +35,7 @@ export default {
       required: true,
     },
   },
+  emits:['delete']
   data() {
     return {
       detailsAreVisible: false,
